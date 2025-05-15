@@ -1,0 +1,60 @@
+.book-detail {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background:  linear-gradient(135deg, #ffffff, #f4f7fc);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.book-image img {
+  max-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.book-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.book-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2f3640;
+}
+
+.book-content p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.book-content .description {
+  margin-top: 1rem;
+  color: #555;
+}
+
+.back-btn {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #007bff;
+  color: white;
+}

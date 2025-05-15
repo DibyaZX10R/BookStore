@@ -1,0 +1,105 @@
+.header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Bootstrap primary with transparency */
+  color: #bfbaba;
+  padding: 1.5rem;
+  text-align: center;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header h1 {
+  margin: -10px;
+  font-size: 1.5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive 4-column grid */
+  gap: 2rem;
+  padding: 0 1rem; /* X-axis padding */
+  margin-top: 2rem;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #920000;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: #000000; /* Optional highlight color */
+}
+
+.card-img-top {
+  max-height: 220px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  margin-top: auto;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #262a2d;
+  color: #fff;
+}
+
+
+/* HTML: <div class="loader"></div> */
+.main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid transparent;
+  border-top: 6px solid #00AAFF;
+  border-right: 6px solid #FF00AA;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 12px rgba(0, 170, 255, 0.5), 0 0 12px rgba(255, 0, 170, 0.5);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

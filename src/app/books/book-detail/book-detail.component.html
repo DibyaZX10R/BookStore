@@ -1,0 +1,17 @@
+<div *ngIf="book$ | async as book" class="book-detail">
+  <div class="book-card">
+    <div class="book-image" *ngIf="book.volumeInfo.imageLinks?.thumbnail">
+    
+        <img *ngIf="book.volumeInfo.imageLinks?.thumbnail"
+        [src]="book.volumeInfo.imageLinks?.thumbnail"
+        alt="{{ book.volumeInfo.title }}" />
+    </div>
+    <div class="book-content">
+      <h2>{{ book.volumeInfo.title }}</h2>
+      <p><strong>Authors:</strong> {{ book.volumeInfo.authors?.join(', ') }}</p>
+      <p><strong>Publisher:</strong> {{ book.volumeInfo.publisher || 'Unknown' }}</p>
+      <p class="description"><strong>Description:</strong><br /> {{ book.volumeInfo.description || 'No description available.' }}</p>
+      <a class="btn btn-primary back-btn" routerLink="/books">← Back to list</a>
+    </div>
+  </div>
+</div>
