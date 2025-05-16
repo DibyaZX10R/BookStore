@@ -19,7 +19,7 @@
 .book-image img {
   max-width: 200px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(85, 64, 64, 0.15);
 }
 
 .book-content {
@@ -57,4 +57,71 @@
 .back-btn:hover {
   background-color: #007bff;
   color: white;
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+
+/* Mobile (<1280px) */
+@media (max-width: 1279px) {
+  .book-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-image img {
+    max-width: 150px;
+  }
+
+  .book-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .book-content p {
+    font-size: 0.95rem;
+  }
+
+  .book-detail {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Desktop (1280px–1919px) */
+@media (min-width: 1280px) and (max-width: 1919px) {
+  .book-detail {
+    max-width: 1000px;
+    padding: 2.5rem;
+  }
+
+  .book-image img {
+    max-width: 220px;
+  }
+
+  .book-content h2 {
+    font-size: 2rem;
+  }
+
+  .book-content p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Large Screens (>=1920px) */
+@media (min-width: 1920px) {
+  .book-detail {
+    max-width: 1100px;
+    padding: 3rem;
+  }
+
+  .book-image img {
+    max-width: 250px;
+  }
+
+  .book-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .book-content p {
+    font-size: 1.2rem;
+  }
 }
